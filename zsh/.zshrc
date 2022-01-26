@@ -15,7 +15,7 @@ unsetopt BEEP
 
 # completions
 autoload -Uz compinit
-zstyle ':completion:*' menu select
+zstyle ':completion:*' menu select search
 # zstyle ':completion::complete:lsof:*' menu yes select
 zmodload zsh/complist
 # compinit
@@ -63,6 +63,8 @@ bindkey -r "^d"
 bindkey  "^[[1~"   beginning-of-line
 bindkey  "^[[4~"   end-of-line
 bindkey "^u" backward-kill-line
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
 
 # FZF 
 # TODO update for mac
